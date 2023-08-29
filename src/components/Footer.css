@@ -1,0 +1,18 @@
+.icon {
+    position: relative; /* Necessário para posicionar o círculo */
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave de cor e transformação */
+  }
+  
+  .icon:hover {
+
+    transform: scale(1.2); /* Aumenta um pouco o tamanho do ícone ao passar o mouse */
+  }
+  
+  
+  
+  .social-icons {
+    margin-top: 10px;
+  }
