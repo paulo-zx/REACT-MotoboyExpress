@@ -52,6 +52,7 @@ export const TabsDashboard = () => {
                 <TabPanel>
                 <h3 className="my-5 text-center">Tarefas Aguardando</h3>
                 <div className="p-3" style={{ border: '1px solid #808080', margin: '10px 0' }}>
+                  <div className="table-responsive">
                     <table className="table">
                         <thead className="table-dark">
                             <tr>
@@ -73,11 +74,13 @@ export const TabsDashboard = () => {
                         </tbody>
                     </table>
                     </div>
+                    </div>
                 </TabPanel>
 
                 <TabPanel>
                 <h3 className="my-5 text-center">Tarefas Em Andamento</h3>
                 <div className="p-3" style={{ border: '1px solid #808080', margin: '10px 0' }}>
+                <div className="table-responsive">
                     <table className="table" >
                         <thead className="table-dark">
                             <tr>
@@ -124,11 +127,13 @@ export const TabsDashboard = () => {
                         </tbody>
                     </table>
                     </div>
+                    </div>
                 </TabPanel>
 
                 <TabPanel>
                 <h3 className="my-5 text-center">Tarefas Encerradas</h3>
                 <div className="p-3" style={{ border: '1px solid #808080', margin: '10px 0' }}>
+                <div className="table-responsive">
                     <table className="table">
                         <thead className="table-dark">
                             <tr>
@@ -158,6 +163,7 @@ export const TabsDashboard = () => {
                             {/* Repita o mesmo padrão para outros status encerrados */}
                         </tbody>
                     </table>
+                    </div>
                     </div>
                 </TabPanel>
             </Tabs>

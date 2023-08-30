@@ -17,34 +17,35 @@ export const MotoboyList = () => {
   return (
     <div>
 
-        <div className="d-flex my-5 justify-content-between">
-            <h1 className='my-S text-center'>Lista de Motoboys</h1>
+            <div className="d-flex my-5 justify-content-between flex-column flex-md-row">
+            <h1 className="my-3 text-center">Lista de Motoboys</h1>
 
-            
-            <form class="d-flex">
-                    <input
-                        class="form-control me-sm-2"
-                        type="search"
-                        placeholder="Buscar Motoboy"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                    /> 
+            <form className="d-flex mb-2 flex-column flex-md-row">
+                <input
+                className="form-control mb-2 mb-md-0 me-md-2"
+                type="search"
+                placeholder="Buscar Motoboy"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                />
             </form>
-            
 
-            <button className='btn btn-outline-secondary my-2 my-sm-0'
+            <button
+                className="btn btn-outline-secondary my-2 my-md-0"
                 onClick={() => navigate("/cadastrar-motoboy")}
-                >
+            >
                 Cadastrar Motoboy
             </button>
-        </div>
+            </div>
+
         
 
         {
             motoboys.length > 0 ? (
                 <div className="card bg-secondary p-3">
+                    <div className="table-responsive">
                     <table className="table table-hover">
-                        <thead>
+                        <thead className="table-dark">
                             <tr>
                                 <th>Nome</th>
                                 <th>Email</th>
@@ -76,6 +77,7 @@ export const MotoboyList = () => {
                                 ))}
                         </tbody>
                     </table>
+                    </div>
                 </div>
             ): (
                     <h3 className="text-center">Nenhum Motoboy</h3>

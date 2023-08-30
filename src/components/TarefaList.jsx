@@ -21,12 +21,12 @@ export const TarefaList = () => {
 
     return (
         <div>
-            <div className="d-flex my-5 justify-content-between">
-                <h1 className="my-S text-center">Lista de Tarefas</h1>
+            <div className="d-flex my-5 justify-content-between flex-column flex-md-row">
+                <h1 className="my-3 text-center">Lista de Tarefas</h1>
 
-                <form className="d-flex">
+                <form className="d-flex mb-2 flex-column flex-md-row">
                     <input
-                        className="form-control me-sm-2"
+                        className="form-control mb-2 mb-md-0 me-md-2"
                         type="search"
                         placeholder="Buscar por Motoboy"
                         value={searchQuery}
@@ -44,8 +44,9 @@ export const TarefaList = () => {
 
             {tarefas.length > 0 ? (
                 <div className="card bg-secondary p-3">
+                    <div className="table-responsive">
                     <table className="table table-hover">
-                        <thead>
+                        <thead className="table-dark">
                             <tr>
                                 <th>Cliente</th>
                                 <th>Motoboy</th>
@@ -74,6 +75,7 @@ export const TarefaList = () => {
                                 ))}
                         </tbody>
                     </table>
+                    </div>
                 </div>
             ) : (
                 <h3 className="text-center">Nenhuma Tarefa</h3>

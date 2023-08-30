@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { getListOfTarefas } from '../services/localstorageTarefa';
 
 export const useContadorData = () => {
